@@ -1,4 +1,4 @@
-# Cashfree PG Flutter SDK 
+# Cashfree Flutter SDK 
 
 # author
 
@@ -15,7 +15,7 @@ zhaolong<zhaoyuen123@126.com>
 
 <br/>
 
-## Step 3: Add permissions (Android)
+## Step 2: Add permissions (Android)
 
 The Cashfree PG SDK requires that you add the INTERNET permission in your `Android Manifest` file.
 
@@ -24,7 +24,7 @@ The Cashfree PG SDK requires that you add the INTERNET permission in your `Andro
     <uses-permission android:name="android.permission.INTERNET" />
 <application ...>
 ```
-## Step 4: Add plist value (iOS)
+## Step 3: Add plist value (iOS)
 
 Opt-in to the embedded views preview by adding a boolean property to the app's Info.plist file with the key io.flutter.embedded_views_preview and the value YES. This is required by the flutter_webview plugin.
 
