@@ -49,11 +49,12 @@ android {
     }
 }
 
-repositories {
-    flatDir {
-        dirs 'libs', '../../../android/libs'
-    }
-}
+// 加载本地aar
+// repositories {
+//     flatDir {
+//         dirs 'libs', '../../../android/libs'
+//     }
+// }
 
 flutter {
     source '../..'

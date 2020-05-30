@@ -18,10 +18,25 @@ buildscript {
     }
 }
 
+def getCurrentProjectDir() {
+    String result = ""
+    rootProject.allprojects { project ->
+        if (project.properties.get("identityPath").toString() == ":cashfree") {
+            result = project.properties.get("projectDir").toString()
+        }
+    }
+    return result
+}
+
 rootProject.allprojects {
+    def dir = getCurrentProjectDir()
     repositories {
         google()
         jcenter()
+        maven {
+            // println "$dir";
+            url "$dir/libs"
+        }
     }
 }
 
@@ -37,14 +52,17 @@ android {
         disable 'InvalidPackage'
     }
 
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
+    // 本地加载
+    // repositories {
+    //     flatDir {
+    //         dirs 'libs'
+    //     }
+    // }
 }
 dependencies {
-    api (name:'cashfreesdk-1.4.9.8-release', ext:'aar')
+    // 本地加载
+    // api (name:'cashfreesdk-1.4.9.8-release', ext:'aar')
+    implementation 'com.gocashfree:cashfreesdk:1.4.9.8'
     implementation 'com.android.volley:volley:1.1.1'
     implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

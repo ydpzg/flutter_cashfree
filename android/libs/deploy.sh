@@ -1,0 +1,1 @@
+mvn deploy:deploy-file -Dfile=cashfreesdk-1.4.9.8-release.aar -Durl="file://." -DgroupId="com.gocashfree" -DartifactId="cashfreesdk" -Dversion="1.4.9.8"
