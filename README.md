@@ -33,12 +33,8 @@ Opt-in to the embedded views preview by adding a boolean property to the app's I
     <true/>
 ```
 
-<br>
-
 ## Step 4: Generate Token (From Backend)
 You will need to generate a token from your backend and pass it to app while initiating payments. For generating token you need to use our token generation API. Please take care that this API is called only from your <b><u>backend</u></b> as it uses **secretKey**. Thus this API should **never be called from App**.
-
-<br/>
 
 ### Request Description
 
@@ -76,7 +72,6 @@ curl -XPOST -H 'Content-Type: application/json' -H 'x-client-id: YOUR_APP_ID' -H
   "orderCurrency":"INR"
 }' 'https://test.cashfree.com/api/v2/cftoken/order'
 ```
-<br/>
 
 ### Response Example
 
@@ -89,7 +84,6 @@ curl -XPOST -H 'Content-Type: application/json' -H 'x-client-id: YOUR_APP_ID' -H
 ```
 
 The "cftoken" is the token that is used authenticate your payment request that will be covered in the next step.
-<br/>
 
 ## Step 5: Initiate Payment
 
@@ -192,11 +186,7 @@ Initiate the payment in a webview. The customer will be taken to the payment pag
     void _handleCashfreeError(CashfreeError cashfreeError) async {
         print("Cashfree error:${cashfreeError.message}");
     }
-```
-
-<br/>
-
-  
+``` 
 
 # Request Parameters
 
