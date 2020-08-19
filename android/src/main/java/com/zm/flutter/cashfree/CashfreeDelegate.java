@@ -86,7 +86,7 @@ public class CashfreeDelegate implements ActivityResultListener {
         // 订单参数
         String appId = options.getString(PARAM_APP_ID);
         String orderId = options.getString(PARAM_ORDER_ID);
-        Integer orderAmount = options.getInt(PARAM_ORDER_AMOUNT);
+        Double orderAmount = options.getDouble(PARAM_ORDER_AMOUNT);
         String orderNote = options.optString(PARAM_ORDER_NOTE, "");
         String customerName = options.optString(PARAM_CUSTOMER_NAME, "");
         String customerPhone = options.optString(PARAM_CUSTOMER_PHONE, "");
