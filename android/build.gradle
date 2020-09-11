@@ -21,8 +21,12 @@ buildscript {
 def getCurrentProjectDir() {
     String result = ""
     rootProject.allprojects { project ->
-        if (project.properties.get("identityPath").toString() == ":cashfree") {
-            result = project.properties.get("projectDir").toString()
+        try {
+            if (project.properties.get("identityPath").toString() == ":cashfree") {
+                result = project.properties.get("projectDir").toString()
+            }
+        } catch (Exception e) {
+            print(e)
         }
     }
     return result
